@@ -888,10 +888,6 @@ while choice != "5":
                 print("------------------------")
             print()
     
-    elif choice == "5":
-        print("Thank you for using task manager!")
-        print("Goodbye!")
-    
     elif choice == "3":
         if len(tasks) == 0:
             print("No tasks added.")
@@ -936,6 +932,10 @@ while choice != "5":
             print(f"Medium priority count: {medium_priority}")
             print(f"Low priority count: {low_priority}")
             print()
+
+    elif choice == "5":
+        print("Thank you for using task manager!")
+        print("Goodbye!") 
 
 
 # -------------------------------------------
