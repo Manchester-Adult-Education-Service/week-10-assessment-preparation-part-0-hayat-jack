@@ -476,6 +476,94 @@ print("")
 # 2. Test by adding some tasks, then viewing them
 #
 # Write your code (add after your choice == "1" section):
+# choice = "0"
+# while choice != "3":
+#     print("""
+#     "1. Add task"
+#     "2. View all tasks"
+#     "3. Exit"
+#     """)
+
+#     print("")
+#     choice = input("Select an option.\n")
+#     print("")
+
+#     while choice != "1" and choice != "2" and choice != "3":
+#         print("Error! invalid choice.")
+#         print("")
+#         print("1. add task \n2.View all tasks \n3.Exit")
+#         print()
+#         choice = input("Select an option: ")
+#         print()
+
+#     if choice == "1":
+#         task_name = input("Enter task name: ")
+#         while task_name == "" :
+#             print("Error! task name must be filled in.")
+#             task_name = input("Enter task name: ")
+#         priority = input("Enter priority (High/Medium/Low): ")
+#         while priority == "":
+#             print("Error! priority cannot be blank")
+#             priority = input("Enter priority (High/Medium/Low): ")
+#         print()
+#         task = {
+#             "task_name": task_name,
+#             "Priority": priority,
+#             "Status": "not started"
+#         }
+#         tasks.append(task)
+
+#         print("Task added successfully")
+#         print()
+#         print(tasks)
+#     elif choice == "2":
+#         if len(tasks) == 0:
+#             print("No tasks added.")
+#             print()
+#         else:
+#             print("All tasks")
+#             for i in tasks: 
+#                 print(f"Name: {i["task_name"]}")
+#                 print(f"Priority: {i["Priority"]}")
+#                 print(f"Status: {i["Status"]}")
+#                 print("------------------------")
+#             print()
+            
+
+
+# -------------------------------------------
+# SWAP COMPUTERS (Don't swap computers if working alone)
+# -------------------------------------------
+# Use Git to:
+# 1. Stage your changes: git add .
+# 2. Commit with message: git commit -m "Completed Task 9"
+# 3. Push to repository: git push origin main
+# The next learner must pull before continuing: git pull origin main
+# -------------------------------------------
+
+
+# -------------------------------------------
+# Task 10: Adding Option 3 - Exit
+# -------------------------------------------
+# When users choose option 3, we should thank them.
+# The while loop will stop automatically.
+#
+# TODO:
+# 1. After your elif choice == "2": section (still inside main while loop), add:
+#
+#    elif choice == "3":
+#        print("Thank you for using the Task Manager")
+#        print("Goodbye")
+#
+# 2. Test the complete program:
+#    - Add a few tasks
+#    - View them
+#    - Exit
+#    - Try invalid menu options
+#    - Try blank task names
+#
+# Write your code (add after your choice == "2" section):
+
 choice = "0"
 while choice != "3":
     print("""
@@ -528,42 +616,10 @@ while choice != "3":
                 print(f"Status: {i["Status"]}")
                 print("------------------------")
             print()
-            
-
-
-# -------------------------------------------
-# SWAP COMPUTERS (Don't swap computers if working alone)
-# -------------------------------------------
-# Use Git to:
-# 1. Stage your changes: git add .
-# 2. Commit with message: git commit -m "Completed Task 9"
-# 3. Push to repository: git push origin main
-# The next learner must pull before continuing: git pull origin main
-# -------------------------------------------
-
-
-# -------------------------------------------
-# Task 10: Adding Option 3 - Exit
-# -------------------------------------------
-# When users choose option 3, we should thank them.
-# The while loop will stop automatically.
-#
-# TODO:
-# 1. After your elif choice == "2": section (still inside main while loop), add:
-#
-#    elif choice == "3":
-#        print("Thank you for using the Task Manager")
-#        print("Goodbye")
-#
-# 2. Test the complete program:
-#    - Add a few tasks
-#    - View them
-#    - Exit
-#    - Try invalid menu options
-#    - Try blank task names
-#
-# Write your code (add after your choice == "2" section):
-
+    
+    elif choice == "3":
+        print("Thank you for using task manager!")
+        print("Goodbye!")
 
 
 
