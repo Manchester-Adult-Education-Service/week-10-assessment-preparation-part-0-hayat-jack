@@ -700,83 +700,83 @@ print("")
 # 6. Change your exit section to: elif choice == "4":
 #
 # Write your code (modify existing code):
-choice = "0"
-while choice != "4":
-    print("""
-    "1. Add task"
-    "2. View all tasks"
-    "3. Search task"
-    "4. Exit
-    """)
+# choice = "0"
+# while choice != "4":
+#     print("""
+#     "1. Add task"
+#     "2. View all tasks"
+#     "3. Search task"
+#     "4. Exit
+#     """)
 
-    print("")
-    choice = input("Select an option.\n")
-    print("")
+#     print("")
+#     choice = input("Select an option.\n")
+#     print("")
 
-    while choice != "1" and choice != "2" and choice != "3" and choice != "4":
-        print("Error! invalid choice.")
-        print("")
-        print("1. add task \n2.View all tasks \n3.Exit")
-        print()
-        choice = input("Select an option: ")
-        print()
+#     while choice != "1" and choice != "2" and choice != "3" and choice != "4":
+#         print("Error! invalid choice.")
+#         print("")
+#         print("1. add task \n2.View all tasks \n3.Exit")
+#         print()
+#         choice = input("Select an option: ")
+#         print()
 
-    if choice == "1":
-        task_name = input("Enter task name: ")
-        while task_name == "" :
-            print("Error! task name must be filled in.")
-            task_name = input("Enter task name: ")
-        priority = input("Enter priority (High/Medium/Low): ")
-        while priority == "":
-            print("Error! priority cannot be blank")
-            priority = input("Enter priority (High/Medium/Low): ")
-        print()
-        task = {
-            "task_name": task_name,
-            "Priority": priority,
-            "Status": "not started"
-        }
-        tasks.append(task)
+#     if choice == "1":
+#         task_name = input("Enter task name: ")
+#         while task_name == "" :
+#             print("Error! task name must be filled in.")
+#             task_name = input("Enter task name: ")
+#         priority = input("Enter priority (High/Medium/Low): ")
+#         while priority == "":
+#             print("Error! priority cannot be blank")
+#             priority = input("Enter priority (High/Medium/Low): ")
+#         print()
+#         task = {
+#             "task_name": task_name,
+#             "Priority": priority,
+#             "Status": "not started"
+#         }
+#         tasks.append(task)
 
-        print("Task added successfully")
-        print()
-        print(tasks)
-    elif choice == "2":
-        if len(tasks) == 0:
-            print("No tasks added.")
-            print()
-        else:
-            print("All tasks")
-            for i in tasks: 
-                print(f"Name: {i["task_name"]}")
-                print(f"Priority: {i["Priority"]}")
-                print(f"Status: {i["Status"]}")
-                print("------------------------")
-            print()
+#         print("Task added successfully")
+#         print()
+#         print(tasks)
+#     elif choice == "2":
+#         if len(tasks) == 0:
+#             print("No tasks added.")
+#             print()
+#         else:
+#             print("All tasks")
+#             for i in tasks: 
+#                 print(f"Name: {i["task_name"]}")
+#                 print(f"Priority: {i["Priority"]}")
+#                 print(f"Status: {i["Status"]}")
+#                 print("------------------------")
+#             print()
     
-    elif choice == "4":
-        print("Thank you for using task manager!")
-        print("Goodbye!")
+#     elif choice == "4":
+#         print("Thank you for using task manager!")
+#         print("Goodbye!")
     
-    elif choice == "3":
-        if len(tasks) == 0:
-            print("No tasks added.")
-            print()
-        else:
-            search_task = input("Enter task name to search for.\n")
-            found = False
-            for i in tasks:
-                if search_task == i["task_name"]:
-                    print("Task found")
-                    print(f"Name: {i["task_name"]}")
-                    print(f"Priority: {i["Priority"]}")
-                    print(f"Status: {i["Status"]}")
-                    print("------------------------")
-                    found = True
-                if found == False:
-                    print()
-                    print("Task not found.")
-                    print()
+#     elif choice == "3":
+#         if len(tasks) == 0:
+#             print("No tasks added.")
+#             print()
+#         else:
+#             search_task = input("Enter task name to search for.\n")
+#             found = False
+#             for i in tasks:
+#                 if search_task == i["task_name"]:
+#                     print("Task found")
+#                     print(f"Name: {i["task_name"]}")
+#                     print(f"Priority: {i["Priority"]}")
+#                     print(f"Status: {i["Status"]}")
+#                     print("------------------------")
+#                     found = True
+#                 if found == False:
+#                     print()
+#                     print("Task not found.")
+#                     print()
 
 
 
@@ -833,7 +833,109 @@ while choice != "4":
 #
 # Write your code (modify existing code):
 
+choice = "0"
+while choice != "5":
+    print("""
+    "1. Add task"
+    "2. View all tasks"
+    "3. Search task"
+    "4. View Statistics"
+    "5. Exit"
+    """)
 
+    print("")
+    choice = input("Select an option.\n")
+    print("")
+
+    while choice != "1" and choice != "2" and choice != "3" and choice != "4" and choice != "5":
+        print("Error! invalid choice.")
+        print("")
+        print("1. add task \n2.View all tasks \n3. Search task \n4. View statistics \n5. Exit\n")
+        print()
+        choice = input("Select an option: ")
+        print()
+
+    if choice == "1":
+        task_name = input("Enter task name: ").lower()
+        while task_name == "" :
+            print("Error! task name must be filled in.")
+            task_name = input("Enter task name: ").lower()
+        priority = input("Enter priority (High/Medium/Low): ").lower()
+        while priority == "":
+            print("Error! priority cannot be blank")
+            priority = input("Enter priority (High/Medium/Low): ").lower()
+        print()
+        task = {
+            "task_name": task_name,
+            "Priority": priority,
+            "Status": "not started"
+        }
+        tasks.append(task)
+
+        print("Task added successfully")
+        print()
+        print(tasks)
+    elif choice == "2":
+        if len(tasks) == 0:
+            print("No tasks added.")
+            print()
+        else:
+            print("All tasks")
+            for i in tasks: 
+                print(f"Name: {i["task_name"]}")
+                print(f"Priority: {i["Priority"]}")
+                print(f"Status: {i["Status"]}")
+                print("------------------------")
+            print()
+    
+    elif choice == "5":
+        print("Thank you for using task manager!")
+        print("Goodbye!")
+    
+    elif choice == "3":
+        if len(tasks) == 0:
+            print("No tasks added.")
+            print()
+        else:
+            search_task = input("Enter task name to search for.\n")
+            found = False
+            for i in tasks:
+                if search_task == i["task_name"]:
+                    print("Task found")
+                    print(f"Name: {i["task_name"]}")
+                    print(f"Priority: {i["Priority"]}")
+                    print(f"Status: {i["Status"]}")
+                    print("------------------------")
+                    found = True
+                if found == False:
+                    print()
+                    print("Task not found.")
+                    print()
+
+    elif choice == "4":
+        if len(tasks) == 0:
+            print("No tasks to calculate statistics on")
+            print()
+        else:
+            low_priority = 0
+            medium_priority = 0
+            high_priority = 0
+
+            for i in tasks:
+                if i["Priority"] == "high":
+                    high_priority += 1
+                if i["Priority"] == "medium":
+                    medium_priority += 1
+                if i["Priority"] == "low":
+                    low_priority += 1
+
+            print("Task statistics:")
+            print()
+            print(f" Total tasks count: {len(tasks)}")
+            print(f"High priority count: {high_priority}")
+            print(f"Medium priority count: {medium_priority}")
+            print(f"Low priority count: {low_priority}")
+            print()
 
 
 # -------------------------------------------
