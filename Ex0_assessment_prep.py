@@ -114,6 +114,7 @@ print("")
 # 5. Print what they chose: print(f"You selected: {choice}")
 #
 # Write your code below:
+choice = "0"
 print("""
 "1. Add task"
 "2. View all tasks"
@@ -159,7 +160,17 @@ print(f"You selected: {choice}")
 # 5. Test it - the menu should repeat until you type "3"
 #
 # Write your code (modify your Task 3 code):
+while choice != "3":
+    choice = "0"
+    print("""
+    "1. Add task"
+    "2. View all tasks"
+    "3. Exit"
+    """)
 
+    print("")
+    choice = input("Select an option.\n")
+    print("")
 
 
 
