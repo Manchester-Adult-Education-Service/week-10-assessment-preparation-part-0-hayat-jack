@@ -564,62 +564,62 @@ print("")
 #
 # Write your code (add after your choice == "2" section):
 
-choice = "0"
-while choice != "3":
-    print("""
-    "1. Add task"
-    "2. View all tasks"
-    "3. Exit"
-    """)
+# choice = "0"
+# while choice != "3":
+#     print("""
+#     "1. Add task"
+#     "2. View all tasks"
+#     "3. Exit"
+#     """)
 
-    print("")
-    choice = input("Select an option.\n")
-    print("")
+#     print("")
+#     choice = input("Select an option.\n")
+#     print("")
 
-    while choice != "1" and choice != "2" and choice != "3":
-        print("Error! invalid choice.")
-        print("")
-        print("1. add task \n2.View all tasks \n3.Exit")
-        print()
-        choice = input("Select an option: ")
-        print()
+#     while choice != "1" and choice != "2" and choice != "3":
+#         print("Error! invalid choice.")
+#         print("")
+#         print("1. add task \n2.View all tasks \n3.Exit")
+#         print()
+#         choice = input("Select an option: ")
+#         print()
 
-    if choice == "1":
-        task_name = input("Enter task name: ")
-        while task_name == "" :
-            print("Error! task name must be filled in.")
-            task_name = input("Enter task name: ")
-        priority = input("Enter priority (High/Medium/Low): ")
-        while priority == "":
-            print("Error! priority cannot be blank")
-            priority = input("Enter priority (High/Medium/Low): ")
-        print()
-        task = {
-            "task_name": task_name,
-            "Priority": priority,
-            "Status": "not started"
-        }
-        tasks.append(task)
+#     if choice == "1":
+#         task_name = input("Enter task name: ")
+#         while task_name == "" :
+#             print("Error! task name must be filled in.")
+#             task_name = input("Enter task name: ")
+#         priority = input("Enter priority (High/Medium/Low): ")
+#         while priority == "":
+#             print("Error! priority cannot be blank")
+#             priority = input("Enter priority (High/Medium/Low): ")
+#         print()
+#         task = {
+#             "task_name": task_name,
+#             "Priority": priority,
+#             "Status": "not started"
+#         }
+#         tasks.append(task)
 
-        print("Task added successfully")
-        print()
-        print(tasks)
-    elif choice == "2":
-        if len(tasks) == 0:
-            print("No tasks added.")
-            print()
-        else:
-            print("All tasks")
-            for i in tasks: 
-                print(f"Name: {i["task_name"]}")
-                print(f"Priority: {i["Priority"]}")
-                print(f"Status: {i["Status"]}")
-                print("------------------------")
-            print()
+#         print("Task added successfully")
+#         print()
+#         print(tasks)
+#     elif choice == "2":
+#         if len(tasks) == 0:
+#             print("No tasks added.")
+#             print()
+#         else:
+#             print("All tasks")
+#             for i in tasks: 
+#                 print(f"Name: {i["task_name"]}")
+#                 print(f"Priority: {i["Priority"]}")
+#                 print(f"Status: {i["Status"]}")
+#                 print("------------------------")
+#             print()
     
-    elif choice == "3":
-        print("Thank you for using task manager!")
-        print("Goodbye!")
+#     elif choice == "3":
+#         print("Thank you for using task manager!")
+#         print("Goodbye!")
 
 
 
@@ -700,6 +700,83 @@ while choice != "3":
 # 6. Change your exit section to: elif choice == "4":
 #
 # Write your code (modify existing code):
+choice = "0"
+while choice != "4":
+    print("""
+    "1. Add task"
+    "2. View all tasks"
+    "3. Search task"
+    "4. Exit
+    """)
+
+    print("")
+    choice = input("Select an option.\n")
+    print("")
+
+    while choice != "1" and choice != "2" and choice != "3" and choice != "4":
+        print("Error! invalid choice.")
+        print("")
+        print("1. add task \n2.View all tasks \n3.Exit")
+        print()
+        choice = input("Select an option: ")
+        print()
+
+    if choice == "1":
+        task_name = input("Enter task name: ")
+        while task_name == "" :
+            print("Error! task name must be filled in.")
+            task_name = input("Enter task name: ")
+        priority = input("Enter priority (High/Medium/Low): ")
+        while priority == "":
+            print("Error! priority cannot be blank")
+            priority = input("Enter priority (High/Medium/Low): ")
+        print()
+        task = {
+            "task_name": task_name,
+            "Priority": priority,
+            "Status": "not started"
+        }
+        tasks.append(task)
+
+        print("Task added successfully")
+        print()
+        print(tasks)
+    elif choice == "2":
+        if len(tasks) == 0:
+            print("No tasks added.")
+            print()
+        else:
+            print("All tasks")
+            for i in tasks: 
+                print(f"Name: {i["task_name"]}")
+                print(f"Priority: {i["Priority"]}")
+                print(f"Status: {i["Status"]}")
+                print("------------------------")
+            print()
+    
+    elif choice == "4":
+        print("Thank you for using task manager!")
+        print("Goodbye!")
+    
+    elif choice == "3":
+        if len(tasks) == 0:
+            print("No tasks added.")
+            print()
+        else:
+            search_task = input("Enter task name to search for.\n")
+            found = False
+            for i in tasks:
+                if search_task == i["task_name"]:
+                    print("Task found")
+                    print(f"Name: {i["task_name"]}")
+                    print(f"Priority: {i["Priority"]}")
+                    print(f"Status: {i["Status"]}")
+                    print("------------------------")
+                    found = True
+                if found == False:
+                    print()
+                    print("Task not found.")
+                    print()
 
 
 
