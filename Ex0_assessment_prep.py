@@ -935,7 +935,7 @@ while choice != "5":
 
     elif choice == "5":
         print("Thank you for using task manager!")
-        print("Goodbye!") 
+        print("Goodbye!")
 
 
 # -------------------------------------------
