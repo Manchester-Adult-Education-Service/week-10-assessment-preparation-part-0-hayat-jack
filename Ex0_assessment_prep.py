@@ -114,17 +114,17 @@ print("")
 # 5. Print what they chose: print(f"You selected: {choice}")
 #
 # Write your code below:
-choice = "0"
-print("""
-"1. Add task"
-"2. View all tasks"
-"3. Exit"
-""")
+# choice = "0"
+# print("""
+# "1. Add task"
+# "2. View all tasks"
+# "3. Exit"
+# """)
 
-print("")
-choice = input("Select an option.\n")
-print("")
-print(f"You selected: {choice}")
+# print("")
+# choice = input("Select an option.\n")
+# print("")
+# print(f"You selected: {choice}")
 
 
 # -------------------------------------------
@@ -209,25 +209,25 @@ print(f"You selected: {choice}")
 # 3. Test it by entering invalid options like "5" or "hello"
 #
 # Write your code (add to your while loop from Task 4):
-choice = "0"
-while choice != "3":
-    print("""
-    "1. Add task"
-    "2. View all tasks"
-    "3. Exit"
-    """)
+# choice = "0"
+# while choice != "3":
+#     print("""
+#     "1. Add task"
+#     "2. View all tasks"
+#     "3. Exit"
+#     """)
 
-    print("")
-    choice = input("Select an option.\n")
-    print("")
+#     print("")
+#     choice = input("Select an option.\n")
+#     print("")
 
-    while choice != "1" and choice != "2" and choice != "3":
-        print("Error! invalid choice.")
-        print("")
-        print("1. add task \n2.View all tasks \n3.Exit")
-        print()
-        choice = input("Select an option: ")
-        print()
+#     while choice != "1" and choice != "2" and choice != "3":
+#         print("Error! invalid choice.")
+#         print("")
+#         print("1. add task \n2.View all tasks \n3.Exit")
+#         print()
+#         choice = input("Select an option: ")
+#         print()
 
 
 
@@ -262,6 +262,32 @@ while choice != "3":
 #
 # Write your code (add to your while loop):
 
+choice = "0"
+while choice != "3":
+    print("""
+    "1. Add task"
+    "2. View all tasks"
+    "3. Exit"
+    """)
+
+    print("")
+    choice = input("Select an option.\n")
+    print("")
+
+    while choice != "1" and choice != "2" and choice != "3":
+        print("Error! invalid choice.")
+        print("")
+        print("1. add task \n2.View all tasks \n3.Exit")
+        print()
+        choice = input("Select an option: ")
+        print()
+
+    if choice == "1":
+        task_name = input("Enter task name: ")
+        priority = input("Enter priority (High/Medium/Low): ")
+        print()
+        print("Task added successfully")
+        print()
 
 
 
