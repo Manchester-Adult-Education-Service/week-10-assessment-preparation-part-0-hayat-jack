@@ -262,32 +262,32 @@ print("")
 #
 # Write your code (add to your while loop):
 
-choice = "0"
-while choice != "3":
-    print("""
-    "1. Add task"
-    "2. View all tasks"
-    "3. Exit"
-    """)
+# choice = "0"
+# while choice != "3":
+#     print("""
+#     "1. Add task"
+#     "2. View all tasks"
+#     "3. Exit"
+#     """)
 
-    print("")
-    choice = input("Select an option.\n")
-    print("")
+#     print("")
+#     choice = input("Select an option.\n")
+#     print("")
 
-    while choice != "1" and choice != "2" and choice != "3":
-        print("Error! invalid choice.")
-        print("")
-        print("1. add task \n2.View all tasks \n3.Exit")
-        print()
-        choice = input("Select an option: ")
-        print()
+#     while choice != "1" and choice != "2" and choice != "3":
+#         print("Error! invalid choice.")
+#         print("")
+#         print("1. add task \n2.View all tasks \n3.Exit")
+#         print()
+#         choice = input("Select an option: ")
+#         print()
 
-    if choice == "1":
-        task_name = input("Enter task name: ")
-        priority = input("Enter priority (High/Medium/Low): ")
-        print()
-        print("Task added successfully")
-        print()
+#     if choice == "1":
+#         task_name = input("Enter task name: ")
+#         priority = input("Enter priority (High/Medium/Low): ")
+#         print()
+#         print("Task added successfully")
+#         print()
 
 
 
@@ -323,7 +323,42 @@ while choice != "3":
 #
 # 4. Test by pressing Enter without typing anything
 #
-# Write your code (add to your choice == "1" section):
+# Write your code (add to your choice == "1" section)
+choice = "0"
+while choice != "3":
+    print("""
+    "1. Add task"
+    "2. View all tasks"
+    "3. Exit"
+    """)
+
+    print("")
+    choice = input("Select an option.\n")
+    print("")
+
+    while choice != "1" and choice != "2" and choice != "3":
+        print("Error! invalid choice.")
+        print("")
+        print("1. add task \n2.View all tasks \n3.Exit")
+        print()
+        choice = input("Select an option: ")
+        print()
+
+    if choice == "1":
+        task_name = input("Enter task name: ")
+        while task_name == "" :
+            print("Error! task name must be filled in.")
+            task_name = input("Enter task name: ")
+        priority = input("Enter priority (High/Medium/Low): ")
+        while priority == "":
+            print("Error! priority cannot be blank")
+            priority = input("Enter priority (High/Medium/Low): ")
+        print()
+        print("Task added successfully")
+        print()
+      
+
+
 
 
 
